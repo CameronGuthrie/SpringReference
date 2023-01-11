@@ -14,13 +14,9 @@ Username and password in application-dev.properties should probabaly be updated 
 
 ```json
 {
-
-    "firstName" : "Cameron",
-
-    "surname" : "Guthrie",
-
-    "phone" : "01234567890"
-
+    "firstName" : "Cameron",
+    "surname" : "Guthrie",
+    "phone" : "01234567890"
 }
 ```
 
@@ -47,8 +43,6 @@ Username and password in application-dev.properties should probabaly be updated 
 ### Delete
 
 `http://localhost:8080/agent/delete/1`
-
-
 
 # Seller
 
@@ -92,8 +86,6 @@ Username and password in application-dev.properties should probabaly be updated 
 
 `http://localhost:8080/seller/delete/1`
 
-
-
 # Buyer
 
 ### Create
@@ -136,8 +128,6 @@ Username and password in application-dev.properties should probabaly be updated 
 
 `http://localhost:8080/buyer/delete/1`
 
-
-
 # Property
 
 ### Create
@@ -147,14 +137,14 @@ Username and password in application-dev.properties should probabaly be updated 
 ```json
 {
     "address" : "somewhere",
-	"postcode" : "this is a postcode",
-	"type" : "APARTMENT",
-	"bedrooms" : 2,
-	"bathrooms" : 1,
-	"garden" : 0,
-	"price" : 150000.40,
-	"status" : "FORSALE",
-	"seller" : {"id" : 1}
+    "postcode" : "this is a postcode",
+    "type" : "APARTMENT",
+    "bedrooms" : 2,
+    "bathrooms" : 1,
+    "garden" : 0,
+    "price" : 150000.40,
+    "status" : "FORSALE",
+    "seller" : {"id" : 1}
 }
 ```
 
@@ -173,14 +163,14 @@ Username and password in application-dev.properties should probabaly be updated 
 ```json
 {
     "address" : "somewhere",
-	"postcode" : "this is a postcode",
-	"type" : "APARTMENT",
-	"bedrooms" : 2,
-	"bathrooms" : 1,
-	"garden" : 0,
-	"price" : 99.99,
-	"status" : "SOLD",
-	"seller" : {"id" : 1},
+    "postcode" : "this is a postcode",
+    "type" : "APARTMENT",
+    "bedrooms" : 2,
+    "bathrooms" : 1,
+    "garden" : 0,
+    "price" : 99.99,
+    "status" : "SOLD",
+    "seller" : {"id" : 1},
     "buyer" : {"id" : 1}
 }
 ```
@@ -188,8 +178,6 @@ Username and password in application-dev.properties should probabaly be updated 
 ### Delete
 
 `http://localhost:8080/property/delete/1`
-
-
 
 # Booking
 
@@ -230,5 +218,3 @@ Username and password in application-dev.properties should probabaly be updated 
 ### Delete
 
 `http://localhost:8080/booking/delete/1`
-
-
