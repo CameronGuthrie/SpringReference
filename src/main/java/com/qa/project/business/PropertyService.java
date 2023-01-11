@@ -53,8 +53,7 @@ public class PropertyService {
 	// Update - PUT
 	public PropertyDTO update(Long id, PropertyDomain model) {
 		
-		PropertyDomain existing = this.repo.findById(id)
-							   .orElseThrow();
+		PropertyDomain existing = this.repo.findById(id).orElseThrow();
 		
 		existing.setAddress(model.getAddress());
 		existing.setPostcode(model.getPostcode());
