@@ -69,11 +69,6 @@ public class PropertyController {
 	@DeleteMapping("/delete/{id}")
 	public ResponseEntity<Object> delete(@PathVariable Long id) {
 		return new ResponseEntity<>(this.service.delete(id) ? HttpStatus.NO_CONTENT : HttpStatus.INTERNAL_SERVER_ERROR);
-		
-		/*
-		 * return this.service.delete(id) ? new ResponseEntity<>(HttpStatus.NO_CONTENT)
-		 *		: new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-		 */
 	}
 	
 }

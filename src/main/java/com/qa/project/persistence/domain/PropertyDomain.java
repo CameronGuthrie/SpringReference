@@ -3,6 +3,7 @@ package com.qa.project.persistence.domain;
 import com.qa.project.persistence.enums.StatusEnum;
 import com.qa.project.persistence.enums.TypeEnum;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -13,7 +14,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
-import jakarta.persistence.PrimaryKeyJoinColumn;
 import jakarta.persistence.Table;
 
 @Entity
@@ -55,37 +55,15 @@ public class PropertyDomain {
 	@JoinColumn(name = "seller_id")
 	private SellerDomain seller;
 	
-	@OneToOne()
-	@PrimaryKeyJoinColumn(name = "buyer_id")
+	// one to one link (unidirectional)
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "buyer_id", referencedColumnName = "buyer_id") 
 	private BuyerDomain buyer;
-	
-//	@Column(name = "seller_id")
-//	private Long sellerId;
-//
-//	@Column(name = "buyer_id")
-//	private Long buyerId;
 	
 	// constructors
 	
 	public PropertyDomain() {
 		super();
-	}
-	
-	// all args constructor
-	public PropertyDomain(Long id, String address, String postcode, TypeEnum type, Integer bedrooms, Integer bathrooms,
-			Boolean garden, Float price, StatusEnum status, SellerDomain seller, BuyerDomain buyer) {
-		super();
-		this.id = id;
-		this.address = address;
-		this.postcode = postcode;
-		this.type = type;
-		this.bedrooms = bedrooms;
-		this.bathrooms = bathrooms;
-		this.garden = garden;
-		this.price = price;
-		this.status = status;
-		this.seller = seller;
-		this.buyer = buyer;
 	}
 	
 	// no buyer constructor

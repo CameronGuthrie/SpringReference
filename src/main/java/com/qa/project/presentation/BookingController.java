@@ -14,22 +14,22 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.qa.project.business.AgentService;
-import com.qa.project.persistence.domain.AgentDomain;
-import com.qa.project.persistence.dto.AgentDTO;
+import com.qa.project.business.BookingService;
+import com.qa.project.persistence.domain.BookingDomain;
+import com.qa.project.persistence.dto.BookingDTO;
 
 @RestController
-@RequestMapping("/agent") // end-point at http://localhost:port/agent
-public class AgentController {
+@RequestMapping("/booking") // end-point at http://localhost:port/booking
+public class BookingController {
 	
 	// mapping URLs to Methods
 	
 	// dependencies
-	private AgentService service;
+	private BookingService service;
 	
 	// constructor
 	@Autowired // grab the object from the beanbag
-	public AgentController(AgentService service) {
+	public BookingController(BookingService service) {
 		super();
 		this.service = service;
 	}
@@ -44,24 +44,24 @@ public class AgentController {
 		 * 		@RequestMapping(method = RequestMethod.CREATE)
 		*/
 	@PostMapping("/create")
-	public ResponseEntity<AgentDTO> create(@RequestBody AgentDomain model) {
+	public ResponseEntity<BookingDTO> create(@RequestBody BookingDomain model) {
 		return new ResponseEntity<>(this.service.create(model), HttpStatus.CREATED);
 	}
 
 	// READ
 	@GetMapping("/read/all")
-	public ResponseEntity<List<AgentDTO>> readAll() {
+	public ResponseEntity<List<BookingDTO>> readAll() {
 		return ResponseEntity.ok(this.service.readAll());
 	}
 	
 	@GetMapping("/read/{id}")
-	public ResponseEntity<AgentDTO> readOne(@PathVariable Long id) {
+	public ResponseEntity<BookingDTO> readOne(@PathVariable Long id) {
 		return ResponseEntity.ok(this.service.readOne(id));
 	}
 
 	// UPDATE - PUT (REPLACE ALL)
 	@PutMapping("/update/{id}")
-	public ResponseEntity<AgentDTO> update(@PathVariable Long id, @RequestBody AgentDomain model) {
+	public ResponseEntity<BookingDTO> update(@PathVariable Long id, @RequestBody BookingDomain model) {
 		return new ResponseEntity<>(this.service.update(id, model), HttpStatus.ACCEPTED);
 	}
 

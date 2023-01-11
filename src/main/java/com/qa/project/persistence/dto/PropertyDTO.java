@@ -21,33 +21,10 @@ public class PropertyDTO {
 	private SellerDomain seller;
 	private BuyerDomain buyer;
 	
-//	@Column(name = "seller_id")
-//	private Long sellerId;
-//
-//	@Column(name = "buyer_id")
-//	private Long buyerId;
-	
 	// constructors
 	
 	public PropertyDTO() {
 		super();
-	}
-	
-	// all args constructor
-	public PropertyDTO(Long id, String address, String postcode, TypeEnum type, Integer bedrooms, Integer bathrooms,
-			Boolean garden, Float price, StatusEnum status, SellerDomain seller, BuyerDomain buyer) {
-		super();
-		this.id = id;
-		this.address = address;
-		this.postcode = postcode;
-		this.type = type;
-		this.bedrooms = bedrooms;
-		this.bathrooms = bathrooms;
-		this.garden = garden;
-		this.price = price;
-		this.status = status;
-		this.seller = seller;
-		this.buyer = buyer;
 	}
 	
 	// no buyer constructor
