@@ -43,6 +43,23 @@ public class PropertyDTO {
 		this.seller = seller;
 	}
 	
+	// all arguments constructor
+	public PropertyDTO(Long id, String address, String postcode, TypeEnum type, Integer bedrooms, Integer bathrooms,
+			Boolean garden, Float price, StatusEnum status, SellerDomain seller, BuyerDomain buyer) {
+		super();
+		this.id = id;
+		this.address = address;
+		this.postcode = postcode;
+		this.type = type;
+		this.bedrooms = bedrooms;
+		this.bathrooms = bathrooms;
+		this.garden = garden;
+		this.price = price;
+		this.status = status;
+		this.seller = seller;
+		this.buyer = buyer;
+	}
+	
 	// getters and setters
 
 	public Long getId() {
