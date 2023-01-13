@@ -5,10 +5,17 @@ import com.qa.project.persistence.domain.SellerDomain;
 import com.qa.project.persistence.enums.StatusEnum;
 import com.qa.project.persistence.enums.TypeEnum;
 
-public class PropertyDTO {
+/*
+ * This class PropertyDTO is used to represent an 'property' object in the application.
+ * This class is a simple POJO (Plain Old Java Object) class that is used to hold data 
+ * and transfer it between different layers of the application. It is also commonly 
+ * known as a Data Transfer Object (DTO) and is used to transfer data between the 
+ * different layers of the application.
+ */
 
-	// variables 
+public class PropertyDTO {
 	
+	// private fields to hold information
 	private Long id;
 	private String address;
 	private String postcode;
@@ -21,8 +28,7 @@ public class PropertyDTO {
 	private SellerDomain seller;
 	private BuyerDomain buyer;
 	
-	// constructors
-	
+	// default constructor
 	public PropertyDTO() {
 		super();
 	}
@@ -60,8 +66,7 @@ public class PropertyDTO {
 		this.buyer = buyer;
 	}
 	
-	// getters and setters
-
+	// getters and setters for each of the fields
 	public Long getId() {
 		return id;
 	}

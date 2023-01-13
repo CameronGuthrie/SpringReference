@@ -11,6 +11,18 @@ import com.qa.project.persistence.domain.BuyerDomain;
 import com.qa.project.persistence.dto.BuyerDTO;
 import com.qa.project.persistence.repo.BuyerRepo;
 
+/*
+ * This BuyerService class contains methods that perform CRUD operations on Buyer 
+ * entities using the BuyerRepo for database interaction and ModelMapper for 
+ * mapping between BuyerDomain and BuyerDTO.
+ * The CRUD functionality and the methods provided are
+ *    - create
+ *    - read all
+ *    - read one
+ *    - update
+ *    - delete
+ */
+
 @Service
 public class BuyerService {
 

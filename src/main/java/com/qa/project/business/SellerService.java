@@ -11,6 +11,18 @@ import com.qa.project.persistence.domain.SellerDomain;
 import com.qa.project.persistence.dto.SellerDTO;
 import com.qa.project.persistence.repo.SellerRepo;
 
+/*
+ * This SellerService class contains methods that perform CRUD operations on Seller 
+ * entities using the SellerRepo for database interaction and ModelMapper for 
+ * mapping between SellerDomain and SellerDTO.
+ * The CRUD functionality and the methods provided are
+ *    - create
+ *    - read all
+ *    - read one
+ *    - update
+ *    - delete
+ */
+
 @Service
 public class SellerService {
 	

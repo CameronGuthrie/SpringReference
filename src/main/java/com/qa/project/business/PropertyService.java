@@ -11,6 +11,18 @@ import com.qa.project.persistence.domain.PropertyDomain;
 import com.qa.project.persistence.dto.PropertyDTO;
 import com.qa.project.persistence.repo.PropertyRepo;
 
+/*
+ * This PropertyService class contains methods that perform CRUD operations on Property 
+ * entities using the PropertyRepo for database interaction and ModelMapper for 
+ * mapping between PropertyDomain and PropertyDTO.
+ * The CRUD functionality and the methods provided are
+ *    - create
+ *    - read all
+ *    - read one
+ *    - update
+ *    - delete
+ */
+
 @Service
 public class PropertyService {
 	

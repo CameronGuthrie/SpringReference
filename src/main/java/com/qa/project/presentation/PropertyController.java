@@ -18,6 +18,11 @@ import com.qa.project.business.PropertyService;
 import com.qa.project.persistence.domain.PropertyDomain;
 import com.qa.project.persistence.dto.PropertyDTO;
 
+/*
+ * This PropertyController class is a Spring REST controller that maps HTTP requests 
+ * to methods that perform CRUD operations on Property entities using PropertyService class.
+ */
+
 @RestController
 @RequestMapping("/property") // end-point at http://localhost:port/property
 public class PropertyController {
@@ -37,36 +42,31 @@ public class PropertyController {
 	// CRUD Functionality
 
 	// CREATE
-		/* @PostMapping signifies that this method will handle GET requests to the specified path
-		 * - http://localhost:port/myroute
-		 * - @PostMapping is a specialisation of @RequestMapping
-		 * The following @RequestMapping is equivalent to @PostMapping
-		 * 		@RequestMapping(method = RequestMethod.CREATE)
-		*/
-	@PostMapping("/create")
+
+	@PostMapping("/create") // signifies that this method will handle POST requests to the specified path
 	public ResponseEntity<PropertyDTO> create(@RequestBody PropertyDomain model) {
 		return new ResponseEntity<>(this.service.create(model), HttpStatus.CREATED);
 	}
 
 	// READ
-	@GetMapping("/read/all")
+	@GetMapping("/read/all") // signifies that this method will handle GET requests to the specified path
 	public ResponseEntity<List<PropertyDTO>> readAll() {
 		return ResponseEntity.ok(this.service.readAll());
 	}
 	
-	@GetMapping("/read/{id}")
+	@GetMapping("/read/{id}") // signifies that this method will handle GET requests to the specified path
 	public ResponseEntity<PropertyDTO> readOne(@PathVariable Long id) {
 		return ResponseEntity.ok(this.service.readOne(id));
 	}
 
 	// UPDATE - PUT (REPLACE ALL)
-	@PutMapping("/update/{id}")
+	@PutMapping("/update/{id}") // signifies that this method will handle PUT requests to the specified path
 	public ResponseEntity<PropertyDTO> update(@PathVariable Long id, @RequestBody PropertyDomain model) {
 		return new ResponseEntity<>(this.service.update(id, model), HttpStatus.ACCEPTED);
 	}
 
 	// DELETE
-	@DeleteMapping("/delete/{id}")
+	@DeleteMapping("/delete/{id}") // signifies that this method will handle DELETE requests to the specified path
 	public ResponseEntity<Object> delete(@PathVariable Long id) {
 		return new ResponseEntity<>(this.service.delete(id) ? HttpStatus.NO_CONTENT : HttpStatus.INTERNAL_SERVER_ERROR);
 	}

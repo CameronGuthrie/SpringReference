@@ -11,6 +11,18 @@ import com.qa.project.persistence.domain.BookingDomain;
 import com.qa.project.persistence.dto.BookingDTO;
 import com.qa.project.persistence.repo.BookingRepo;
 
+/*
+ * This BookingService class contains methods that perform CRUD operations on Booking 
+ * entities using the BookingRepo for database interaction and ModelMapper for 
+ * mapping between BookingDomain and BookingDTO.
+ * The CRUD functionality and the methods provided are
+ *    - create
+ *    - read all
+ *    - read one
+ *    - update
+ *    - delete
+ */
+
 @Service
 public class BookingService {
 	
