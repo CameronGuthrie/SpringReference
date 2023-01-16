@@ -111,5 +111,13 @@ public class BuyerDomain {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+
+	public List<PropertyDomain> getProperties() {
+		return properties;
+	}
+
+	public void setProperties(List<PropertyDomain> properties) {
+		this.properties = properties;
+	}
 	
 }

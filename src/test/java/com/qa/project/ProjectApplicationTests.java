@@ -1,10 +1,10 @@
-package com.qa.baespring;
+package com.qa.project;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BaeSpringApplicationTests {
+class ProjectApplicationTests {
 
 	@Test
 	void contextLoads() {
